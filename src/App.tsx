@@ -28,6 +28,7 @@ function App() {
     )
   }
 
+  {/*
   function FileIcon() {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
@@ -36,6 +37,7 @@ function App() {
       </svg>
     )
   }
+  */}
 
   {/* note: consider adding a rickroll button for fun? */}
 
