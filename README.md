@@ -1,6 +1,6 @@
 ## Link
 
-https://iankeilman.vercel.app/
+https://iankeilman.com
 
 # Portfolio Website
 
@@ -27,4 +27,4 @@ npm install
 npm run dev
 
 ```
-iankeilman.com - worth $7.99 subscription?
+https://iankeilman.vercel.app is also a functioning link
