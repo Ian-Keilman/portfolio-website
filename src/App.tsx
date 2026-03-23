@@ -141,7 +141,7 @@ function App() {
         {/* experience section */}
         <section
           id="experience"
-          className="grid gap-12 border-t border-white/10 py-20 md:grid-cols-12"
+          className="border-t border-white/10 py-20"
         >
           {/* section intro */}
           <div className="md:col-span-4">
@@ -157,7 +157,7 @@ function App() {
           </div>
 
           {/* right column: all experience cards go inside this one wrapper */}
-          <div className="space-y-6 md:col-span-8">
+          <div className="mt-10 space-y-6">
             {/* Internship 2 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
@@ -279,6 +279,126 @@ function App() {
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-3xl">
                   <p className="font-mono text-[13px] text-zinc-500">
+                    2026 · full-stack web application
+                  </p>
+
+                  <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                    sorter.ly
+                  </h3>
+
+                  <p className="mt-5 text-lg leading-8 text-zinc-300">
+                    FastAPI backend for keeping track of records, issues, notes, or other structured entires
+                  </p>
+
+                  {/* short highlights for the project */}
+                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                    <li>• Local-first customizable collection manager with dynamic fields, typed records, and private SQLite-backed storage</li>
+                    <li>• Implemented record CRUD, typed sorting and filtering, and CSV import/export in a full-stack web application</li>
+                    <li>• Designed a minimal frontend UI for fast, local data organization across flexible personal or professional use cases</li>
+                  </ul>
+
+                  {/* light tag row */}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Next.js
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      React
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      TypeScript
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      SQLite
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Drizzle ORM
+                    </span>
+                  </div>
+
+                  {/* project links */}
+                  <div className="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
+                    <a href="https://github.com/Ian-Keilman/sorter.ly" className="transition hover:text-rose-400">
+                     GitHub ↗ 
+                    </a>
+                    <a href="#" className="transition hover:text-rose-400">
+                     {/* Demo ↗ */}
+                    </a>
+                  </div>
+                </div>
+
+                {/* small right-side label if i need it */}
+                <div className="shrink-0 text-sm text-zinc-500">
+                  
+                </div>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                <div className="max-w-3xl">
+                  <p className="font-mono text-[13px] text-zinc-500">
+                    2026 · Python CLI, security
+                  </p>
+
+                  <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                    FaultSift
+                  </h3>
+
+                  <p className="mt-5 text-lg leading-8 text-zinc-300">
+                    Python CLI for Linux log triage
+                  </p>
+
+                  {/* short highlights for the project */}
+                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                    <li>• Developed a python CLI for Linux log triage that scans log files, flags failures, and summarizes issues by severity</li>
+                    <li>• Implemented modular rule matching, scanning, scoring, reporting, and local validation with pytest</li>
+                  </ul>
+
+                  {/* light tag row */}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Python
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Regex
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Pytest
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Git
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      CLI
+                    </span>
+                  </div>
+
+                  {/* project links */}
+                  <div className="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
+                    <a href="https://github.com/Ian-Keilman/faultsift" className="transition hover:text-rose-400">
+                     GitHub ↗  {/* Uncomment if I make the repository public */}
+                    </a>
+                    <a href="#" className="transition hover:text-rose-400">
+                     {/* Demo ↗ */} {/* I'll uncomment this once the repository goes public */}
+                    </a>
+                  </div>
+                </div>
+
+                {/* small right-side label if i need it */}
+                <div className="shrink-0 text-sm text-zinc-500">
+                  
+                </div>
+              </div>
+            </article>         
+
+
+
+
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                <div className="max-w-3xl">
+                  <p className="font-mono text-[13px] text-zinc-500">
                     2025 - 2026 · backend API / record management
                   </p>
 
@@ -292,9 +412,8 @@ function App() {
 
                   {/* short highlights for the project */}
                   <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                    <li>• Implemented user signup/login, JWT authentification, and protected API routes</li>
-                    <li>• Built full CRUD for records tied to the logged-in user, with basic filtering support</li>
-                    <li>• Used PostgreSQL, SQLAlchemy, and Alembic migrations, with pytest and Docker Compose for local development</li>
+                    <li>• Built a FastAPI backend for secure per-user record, issue, and activity tracking with authenticated CRUD</li>
+                    <li>• Added Postgres + Alembic migrations, API tests, and GitHub Actions CI with PR-based review before merge</li>
                   </ul>
 
                   {/* light tag row */}
@@ -309,7 +428,16 @@ function App() {
                       PostgreSQL
                     </span>
                     <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      JWT Auth
+                      SQLAlchemy
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Alembic
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Pytest
+                    </span>
+                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
+                      Docker
                     </span>
                   </div>
 
@@ -330,21 +458,6 @@ function App() {
                 </div>
               </div>
             </article>
-
-            {/* project 2 */} {/* My second project is still in development, but once it's done, it'll be easy to add here*/}
-            {/*
-            <article className="rounded-2xl border border-dashed border-white/10 p-7">
-              <p className="font-mono text-[13px] text-zinc-500">in progress</p>
-
-              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                
-              </h3>
-
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-300">
-                
-              </p>
-            </article>
-            */}
           </div>
         </section>
 
