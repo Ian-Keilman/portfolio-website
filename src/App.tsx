@@ -85,7 +85,7 @@ function App() {
             {/* left side text */}
             <div className="md:col-span-8">
               <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
-                ROBOTICS ENGINEERING at University of California, Santa Cruz
+                Computer Engineering & Robotics at University of California, Santa Cruz
               </p>
 
               <div className="mt-8 max-w-4xl">
@@ -165,7 +165,7 @@ function App() {
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Engineering Intern - Wisecarver Automation
+                Automation, Robotics, & Software Intern
               </h3>
               
               <div className="shrink-0 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-500">
@@ -181,10 +181,10 @@ function App() {
               */}
 
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li></li>
-                <li>• Calibrated robotic arm routines for an automation workflow.</li>
-                <li>• Supported computer vision data quality through annotation, review, and consistency checks.</li>
-                <li>• Contributed to hardware-oriented work including PLC and test platform design.</li>
+                <li>• Built a local torque-spec lookup web app (search + filter by product/part/fastener list) and designed the HTML UI</li>
+                <li>• Calibrated robotic arm routines for an automation workflow and verified repeatable behavior</li>
+                <li>• Validated model training dataset quality via CVAT labeling + QA (guidelines, spot checks, consistency reviews)</li>
+                <li>• Contributed to a PLC test platform by creating PCB schematics and a modular mechanical CAD mounting system</li>
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-2">
@@ -209,11 +209,11 @@ function App() {
             {/* Internship 1 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Grand Petroleum • Pleasant Hill, CA | Fall 2024 - Summer 2025
+                Grand Petroleum Inc. • Pleasant Hill, CA | Fall 2024 - Summer 2025
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Data Automation Intern
+                Software Intern - Data Automation
               </h3>
 
               {/*Overview text*/}
@@ -482,7 +482,7 @@ function App() {
           {/* right column */}
           <div className="space-y-8 md:col-span-8">
             <p className="max-w-3xl text-lg leading-8 text-zinc-300">
-              I study robotics engineering because I've never been interested in <em>just</em> one side of technology. 
+              I study robotics and computer engineering because I've never been interested in <em>just</em> one side of technology. 
               I've long been drawn to mechanical, electrical, computer, and software engineering, and robotics felt like the one field that brought all of them together. 
               It gave me a way to pursue broad technical interests without narrowing myself too early. 
               That mindset still shapes the kind of work I'm most drawn to: projects that connect disciplines and let me build across more than one layer of a system.
