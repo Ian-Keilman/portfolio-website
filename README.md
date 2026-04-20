@@ -1,14 +1,12 @@
-## Link
+# https://iankeilman.com
 
-https://iankeilman.com
-
-# Portfolio Website
+## Portfolio Website
 
 Personal portfolio website.
 
 Built with React, TypeScript, Vite, and Tailwind CSS.
 
-## Overview
+### Overview
 
 - featured projects (does the website count too?)
 - internship and technical experience
