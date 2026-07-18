@@ -1,4 +1,6 @@
 // main portfolio page
+const showFaultSiftProject = false
+
 function App() {
 
   {/* Link icons for the 'contact' section */}
@@ -85,7 +87,7 @@ function App() {
             {/* left side text */}
             <div className="md:col-span-8">
               <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
-                Computer Engineering & Robotics at University of California, Santa Cruz
+                Computer Science, Engineering, and Robotics · UC Santa Cruz Graduate
               </p>
 
               <div className="mt-8 max-w-4xl">
@@ -94,9 +96,8 @@ function App() {
                 </h1>
 
                 <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-                  I'm a multidisciplinary engineering student building toward software and systems-oriented roles.
-                  My background combines internships and technical work involving mechatronics, automation, software tooling, CAD and circuitry,
-                  while my broader interests include anything involving technology, like software engineering, data science, or cybersecurity.
+                  New-grad software engineer with 3 internships building backend/database systems, data workflow tools, and internal applications.
+                  Strong in Python, C/C++, TypeScript, SQL, Linux, and full-stack development; seeking SWE roles in backend systems, data-heavy applications, and developer tooling.
                 </p>
               </div>
 
@@ -158,14 +159,31 @@ function App() {
 
           {/* right column: all experience cards go inside this one wrapper */}
           <div className="mt-10 space-y-6">
-            {/* Internship 2 */}
+            {/* Internship 3 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Bishop-Wisecarver • Pittsburg, CA | Winter 2026 - Present
+                Zee Foods, LLC. • Fremont, CA (Remote) | May 2026 - Present
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Automation, Robotics, & Software Intern
+                Software Engineer - Backend & Database
+              </h3>
+
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Built backend/database features for Polaris, a full-stack internal operations platform replacing B2B SaaS workflows</li>
+                <li>• Built order management features with PostgreSQL schemas, Drizzle, CRUD, server actions, and SKU-linked records</li>
+                <li>• Added RLS/CASL authorization, real-time UI updates, integration tests, and end-to-end validation</li>
+              </ul>
+            </article>
+
+            {/* Internship 2 */}
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
+              <p className="font-mono text-[13px] text-zinc-500">
+                Bishop-Wisecarver • Pittsburg, CA | February 2026 - Present
+              </p>
+
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                Engineering Intern - Robotics & Automation
               </h3>
               
               <div className="shrink-0 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-500">
@@ -181,10 +199,9 @@ function App() {
               */}
 
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Built a local torque-spec lookup web app (search + filter by product/part/fastener list) and designed the HTML UI</li>
-                <li>• Calibrated robotic arm routines for an automation workflow and verified repeatable behavior</li>
-                <li>• Validated model training dataset quality via CVAT labeling + QA (guidelines, spot checks, consistency reviews)</li>
-                <li>• Contributed to a PLC test platform by creating PCB schematics and a modular mechanical CAD mounting system</li>
+                <li>• Built a local torque-spec lookup tool to map product/part numbers to fastener lists and reduce manual lookup time</li>
+                <li>• Programmed and calibrated robotic arm routines for automated scanning workflows, validating motion behavior</li>
+                <li>• Validated computer vision training data in CVAT through labeling QA, spot reviews, and consistency audits</li>
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-2">
@@ -209,12 +226,16 @@ function App() {
             {/* Internship 1 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Grand Petroleum Inc. • Pleasant Hill, CA | Fall 2024 - Summer 2025
+                Grand Petroleum Inc. • Pleasant Hill, CA (Remote) | September 2024 - August 2025
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Software Intern - Data Automation
+                Software Engineer - Backend & Data Automation
               </h3>
+
+              <div className="shrink-0 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-500">
+                Internship
+              </div>
 
               {/*Overview text*/}
               {/*
@@ -224,9 +245,9 @@ function App() {
               */}
 
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Created an Excel + VBA macro suite that converts raw multi-store exports into standardized margin/sales reports</li>
-                <li>• Added automated validation + exception flags for missing data, outliers, and pricing/cost/profit mismatches</li>
-                <li>• Designed one-click runs for non-technical users with consistent outputs and lightweight run</li>
+                <li>• Built an Excel/VBA automation suite that converted raw multi-store exports into standardized sales/margin reports</li>
+                <li>• Added automated validation and exception flagging for missing data, outliers, and pricing/cost/profit mismatches</li>
+                <li>• Designed one-click workflows for non-technical users, reducing manual spreadsheet review time</li>
               </ul>
 
               <div className="mt-6 flex flex-wrap gap-2">
@@ -249,6 +270,32 @@ function App() {
                   VBA
                 </span>
               </div>
+            </article>
+          </div>
+        </section>
+
+{/*---------------------------------------------------------------------------------------------------------------------------------------*/}
+
+        {/* education section */}
+        <section
+          id="education"
+          className="border-t border-white/10 py-20"
+        >
+          <div className="md:col-span-4">
+            <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
+              education
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
+              <p className="font-mono text-[13px] text-zinc-500">
+                University of California, Santa Cruz • 2023 - 2026
+              </p>
+
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                Bachelor's degree, Computer Science and Engineering
+              </h3>
             </article>
           </div>
         </section>
@@ -334,6 +381,8 @@ function App() {
               </div>
             </article>
 
+            {/* FaultSift project box commented out, shell kept for future use */}
+            {showFaultSiftProject && (
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-3xl">
@@ -390,7 +439,8 @@ function App() {
                   
                 </div>
               </div>
-            </article>         
+            </article>
+            )}
 
 
 
@@ -475,14 +525,14 @@ function App() {
             </p>
 
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">
-              Why robotics?
+
             </h2>
           </div>
 
           {/* right column */}
           <div className="space-y-8 md:col-span-8">
             <p className="max-w-3xl text-lg leading-8 text-zinc-300">
-              I study robotics and computer engineering because I've never been interested in <em>just</em> one side of technology. 
+              I studied computer science, engineering, and robotics because I've never been interested in <em>just</em> one side of technology.
               I've long been drawn to mechanical, electrical, computer, and software engineering, and robotics felt like the one field that brought all of them together. 
               It gave me a way to pursue broad technical interests without narrowing myself too early. 
               That mindset still shapes the kind of work I'm most drawn to: projects that connect disciplines and let me build across more than one layer of a system.
@@ -493,15 +543,16 @@ function App() {
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
                 <p className="font-mono text-[13px] text-zinc-500">interests</p>
                 <p className="mt-4 text-base leading-7 text-zinc-300">
-                  Programming, hardware, CAD, data science and engineering,
-                  cybersecurity, and technical problem-solving across disciplines.
+                  Backend systems, database-driven applications, developer tooling,
+                  data automation, robotics, and computer vision.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
                 <p className="font-mono text-[13px] text-zinc-500">currently focused on</p>
                 <p className="mt-4 text-base leading-7 text-zinc-300">
-                  Coursework, personal projects, DSA fundamentals, LeetCode, app & game design, and hands-on technical work.
+                  Building backend and full-stack applications with Python, TypeScript, React/Next.js,
+                  REST APIs, PostgreSQL/SQLite, Drizzle ORM, SQLAlchemy, Linux, Docker, and GitHub Actions.
                 </p>
               </div>
             </div>
