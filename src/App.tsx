@@ -1,5 +1,4 @@
 // main portfolio page
-const showFaultSiftProject = false
 
 function App() {
 
@@ -23,14 +22,12 @@ function App() {
   function MailIcon() {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-        {/* two buttons, for two email addresse */}
         <path d="M3 6.75h18v10.5H3z" />
         <path d="m4 8 8 6 8-6" />
       </svg>
     )
   }
 
-  {/*
   function FileIcon() {
     return (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
@@ -39,7 +36,6 @@ function App() {
       </svg>
     )
   }
-  */}
 
   {/* note: consider adding a rickroll button for fun? */}
 
@@ -50,7 +46,7 @@ function App() {
     <div id="home" className="min-h-screen bg-[#050608] text-zinc-100">
       {/* top nav */}
       <header className="sticky top-0 z-30 border-b border-white/10 bg-[#050608]/85 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between px-6 py-5">
           {/* left side: name */}
           <a
             href="#home"
@@ -60,7 +56,7 @@ function App() {
           </a>
 
           {/* right side: nav links */}
-          <nav className="flex items-center gap-7 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-400">
+          <nav className="flex flex-wrap items-center gap-x-5 gap-y-3 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-400">
             <a href="#experience" className="transition hover:text-rose-400">
               experience
             </a>
@@ -80,14 +76,14 @@ function App() {
 {/*---------------------------------------------------------------------------------------------------------------------------------------*/}
 
       {/* main content */}
-      <main id="#home" className="mx-auto max-w-6xl px-6 pb-24 pt-16 md:pt-24">
+      <main className="mx-auto max-w-6xl px-6 pb-24 pt-16 md:pt-24">
         {/* intro / hero section */}
         <section className="border-b border-white/10 pb-20">
           <div className="grid gap-10 md:grid-cols-12 md:items-start">
             {/* left side text */}
             <div className="md:col-span-8">
               <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
-                Computer Science, Engineering, and Robotics · UC Santa Cruz Graduate
+                Software Engineer · UC Santa Cruz Graduate
               </p>
 
               <div className="mt-8 max-w-4xl">
@@ -96,10 +92,21 @@ function App() {
                 </h1>
 
                 <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-                  New-grad software engineer with 3 internships building backend/database systems, data workflow tools, and internal applications.
-                  Strong in Python, C/C++, TypeScript, SQL, Linux, and full-stack development; seeking SWE roles in backend systems, data-heavy applications, and developer tooling.
+                  Software Engineer with full-time contract experience and 3 internships building backend/database systems, internal
+                  tools, and data-heavy applications. Strong with Python, TypeScript, C/C++, SQL, PostgreSQL, React/Next.js, and Linux.
                 </p>
               </div>
+
+              <p className="mt-5 font-mono text-sm text-zinc-400">
+                San Francisco Bay Area, CA · U.S. Citizen
+              </p>
+              <a
+                href="/Ian_Keilman_resume.pdf"
+                className="mt-6 inline-flex items-center gap-3 rounded-xl border border-white/10 px-5 py-3 text-zinc-200 transition hover:border-rose-400/40 hover:text-rose-400"
+              >
+                <FileIcon />
+                View résumé ↗
+              </a>
 
               {/* Extra buttons that go below my summary. I decided not to use these */}
               {/*
@@ -123,7 +130,7 @@ function App() {
               <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
                 <img
                   src="/portrait.jpg"
-                  alt="Project or engineering related image"
+                  alt="Portrait of Ian Keilman"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -159,19 +166,35 @@ function App() {
 
           {/* right column: all experience cards go inside this one wrapper */}
           <div className="mt-10 space-y-6">
+            {/* Current contract */}
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
+              <p className="font-mono text-[13px] text-zinc-500">
+                American Soil Testing & Engineering Inc. • Alamo, CA (Remote) | August 2026 - Present
+              </p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                Software Engineer | Contract, Project Lead
+              </h3>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Led a small development team to deliver a custom reporting application, solely owning UI/UX design and system architecture while translating evolving client requirements using TypeScript, React, Node.js, and Electron.</li>
+                <li>• Built reusable report templates, autofill workflows, and a PDF/DOCX ingestion pipeline using PDF.js and Tesseract OCR to support editing legacy documents containing text, images, tables, and metadata.</li>
+                <li>• Engineered schema-validated offline persistence with atomic file writes, IndexedDB, and filesystem synchronization, enabling offline editing and file sharing through a Google Drive–synced folder without a custom cloud backend.</li>
+                <li>• Developed collision-aware document layout, cross-page reflow, and PDF export; expanded the regression suite to 355 automated tests across 26 test files.</li>
+              </ul>
+            </article>
+
             {/* Internship 3 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Zee Foods, LLC. • Fremont, CA (Remote) | May 2026 - Present
+                Zee Foods, LLC. • Fremont, CA (Remote) | May 2026 - August 2026
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Software Engineer - Backend & Database
+                Software Engineering Intern | Backend & Database
               </h3>
 
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
                 <li>• Built backend/database features for Polaris, a full-stack internal operations platform replacing B2B SaaS workflows</li>
-                <li>• Built order management features with PostgreSQL schemas, Drizzle, CRUD, server actions, and SKU-linked records</li>
+                <li>• Created order management features with PostgreSQL schemas, Drizzle, CRUD, server actions, and SKU-linked records</li>
                 <li>• Added RLS/CASL authorization, real-time UI updates, integration tests, and end-to-end validation</li>
               </ul>
             </article>
@@ -179,15 +202,15 @@ function App() {
             {/* Internship 2 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Bishop-Wisecarver • Pittsburg, CA | February 2026 - Present
+                Bishop-Wisecarver • Pittsburg, CA | February 2026 - May 2026
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Engineering Intern - Robotics & Automation
+                Software Engineering Intern | Robotics & Automation
               </h3>
               
               <div className="shrink-0 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-500">
-                Current Role
+                Internship
               </div>
 
               {/* Overview text */}
@@ -230,7 +253,7 @@ function App() {
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Software Engineer - Backend & Data Automation
+                Software Engineering Intern | Backend & Data Automation
               </h3>
 
               <div className="shrink-0 font-mono text-[13px] uppercase tracking-[0.18em] text-zinc-500">
@@ -290,228 +313,92 @@ function App() {
           <div className="mt-10">
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                University of California, Santa Cruz • 2023 - 2026
+                University of California, Santa Cruz • 2026
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Bachelor's degree, Computer Science and Engineering
+                Bachelor’s Degree, Computer Science and Engineering
               </h3>
+              <p className="mt-4 text-base leading-7 text-zinc-400">
+                Focus in networking & digital technology
+              </p>
             </article>
           </div>
         </section>
 
 {/*---------------------------------------------------------------------------------------------------------------------------------------*/}
 
-        {/* projects & activities */}
-        <section id="projects" className="py-16 border-t border-white/10">
-          {/* section label */}
-          <p className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
+        {/* projects */}
+        <section id="projects" className="border-t border-white/10 py-16">
+          <h2 className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">
             Featured Projects
-          </p>
-
-          {/* section title */}
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            
           </h2>
-
-          {/* short section description */}
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-400">
-            { /* Here's the stuff I make personally, outside of internships and school. */}
-          </p>
-
-          {/* stacked work cards */}
-          <div className="mt-12 space-y-6">
-            {/* project 1 */}
+          <div className="mt-10 space-y-6">
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                <div className="max-w-3xl">
-                  <p className="font-mono text-[13px] text-zinc-500">
-                    2026 · full-stack web application
-                  </p>
-
-                  <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                    sorter.ly
-                  </h3>
-
-                  <p className="mt-5 text-lg leading-8 text-zinc-300">
-                    FastAPI backend for keeping track of records, issues, notes, or other structured entires
-                  </p>
-
-                  {/* short highlights for the project */}
-                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                    <li>• Local-first customizable collection manager with dynamic fields, typed records, and private SQLite-backed storage</li>
-                    <li>• Implemented record CRUD, typed sorting and filtering, and CSV import/export in a full-stack web application</li>
-                    <li>• Designed a minimal frontend UI for fast, local data organization across flexible personal or professional use cases</li>
-                  </ul>
-
-                  {/* light tag row */}
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Next.js
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      React
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      TypeScript
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      SQLite
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Drizzle ORM
-                    </span>
-                  </div>
-
-                  {/* project links */}
-                  <div className="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
-                    <a href="https://github.com/Ian-Keilman/sorter.ly" className="transition hover:text-rose-400">
-                     GitHub ↗ 
-                    </a>
-                    <a href="#" className="transition hover:text-rose-400">
-                     {/* Demo ↗ */}
-                    </a>
-                  </div>
-                </div>
-
-                {/* small right-side label if i need it */}
-                <div className="shrink-0 text-sm text-zinc-500">
-                  
-                </div>
+              <h3 className="text-3xl font-semibold tracking-tight text-white">sorter.ly</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Local-first customizable collection manager</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Local-first customizable collection manager with dynamic fields, typed records, and private SQLite-backed storage</li>
+                <li>• Implemented record CRUD, typed sorting and filtering, and CSV import/export in a full-stack web application</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Next.js</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">React</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">TypeScript</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">SQLite</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Drizzle ORM</span>
+              </div>
+              <a href="https://github.com/Ian-Keilman/sorter.ly" className="mt-6 inline-block text-sm text-zinc-400 transition hover:text-rose-400">
+                GitHub ↗
+              </a>
+            </article>
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+              <h3 className="text-3xl font-semibold tracking-tight text-white">HedgeSlice</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Price-time priority limit order book · In development</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Implementing a price-time priority limit order book with limit/market orders, cancellations, and trade execution logs</li>
+                <li>• Building matching logic with ordered maps, queues, and hash tables; validating edge cases with unit tests</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">C++</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">STL</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">GoogleTest</span>
               </div>
             </article>
-
-            {/* FaultSift project box commented out, shell kept for future use */}
-            {showFaultSiftProject && (
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                <div className="max-w-3xl">
-                  <p className="font-mono text-[13px] text-zinc-500">
-                    2026 · Python CLI, security
-                  </p>
-
-                  <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                    FaultSift
-                  </h3>
-
-                  <p className="mt-5 text-lg leading-8 text-zinc-300">
-                    Python CLI for Linux log triage
-                  </p>
-
-                  {/* short highlights for the project */}
-                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                    <li>• Developed a python CLI for Linux log triage that scans log files, flags failures, and summarizes issues by severity</li>
-                    <li>• Implemented modular rule matching, scanning, scoring, reporting, and local validation with pytest</li>
-                  </ul>
-
-                  {/* light tag row */}
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Python
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Regex
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Pytest
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Git
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      CLI
-                    </span>
-                  </div>
-
-                  {/* project links */}
-                  <div className="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
-                    <a href="https://github.com/Ian-Keilman/faultsift" className="transition hover:text-rose-400">
-                     GitHub ↗  {/* Uncomment if I make the repository public */}
-                    </a>
-                    <a href="#" className="transition hover:text-rose-400">
-                     {/* Demo ↗ */} {/* I'll uncomment this once the repository goes public */}
-                    </a>
-                  </div>
-                </div>
-
-                {/* small right-side label if i need it */}
-                <div className="shrink-0 text-sm text-zinc-500">
-                  
-                </div>
+              <h3 className="text-3xl font-semibold tracking-tight text-white">FaultSift</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Linux log triage command-line tool</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Scans log files, flags failures, and summarizes severity</li>
+                <li>• Separates matching, scanning, scoring, and reporting into modules, with pytest validation</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Regex</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Git</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">CLI</span>
               </div>
             </article>
-            )}
-
-
-
-
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                <div className="max-w-3xl">
-                  <p className="font-mono text-[13px] text-zinc-500">
-                    2025 - 2026 · backend API / record management
-                  </p>
-
-                  <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                    TraceShelf
-                  </h3>
-
-                  <p className="mt-5 text-lg leading-8 text-zinc-300">
-                    FastAPI backend for keeping track of records, issues, notes, or other structured entires
-                  </p>
-
-                  {/* short highlights for the project */}
-                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                    <li>• Built a FastAPI backend for secure per-user record, issue, and activity tracking with authenticated CRUD</li>
-                    <li>• Added Postgres + Alembic migrations, API tests, and GitHub Actions CI with PR-based review before merge</li>
-                  </ul>
-
-                  {/* light tag row */}
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Python
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      FastAPI
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      PostgreSQL
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      SQLAlchemy
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Alembic
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Pytest
-                    </span>
-                    <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">
-                      Docker
-                    </span>
-                  </div>
-
-                  {/* project links */}
-                  <div className="mt-6 flex flex-wrap gap-5 text-sm text-zinc-400">
-                    <a href="#" className="transition hover:text-rose-400">
-                     {/* GitHub ↗ */} {/* Uncomment if I make the repository public */}
-                    </a>
-                    <a href="#" className="transition hover:text-rose-400">
-                     {/* Demo ↗ */} {/* I'll uncomment this once the repository goes public */}
-                    </a>
-                  </div>
-                </div>
-
-                {/* small right-side label if i need it */}
-                <div className="shrink-0 text-sm text-zinc-500">
-                  
-                </div>
+              <h3 className="text-3xl font-semibold tracking-tight text-white">TraceShelf</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Authenticated record-management backend</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• FastAPI backend for authenticated, per-user record, issue, and activity CRUD</li>
+                <li>• PostgreSQL and Alembic migrations, API tests, GitHub Actions CI, and pull request review</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">FastAPI</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">PostgreSQL</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">SQLAlchemy</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Alembic</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Docker</span>
               </div>
             </article>
           </div>
         </section>
-
-{/*---------------------------------------------------------------------------------------------------------------------------------------*/}
 
         {/* about section */}
         <section
@@ -524,9 +411,6 @@ function App() {
               about
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">
-
-            </h2>
           </div>
 
           {/* right column */}
@@ -551,8 +435,8 @@ function App() {
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
                 <p className="font-mono text-[13px] text-zinc-500">currently focused on</p>
                 <p className="mt-4 text-base leading-7 text-zinc-300">
-                  Building backend and full-stack applications with Python, TypeScript, React/Next.js,
-                  REST APIs, PostgreSQL/SQLite, Drizzle ORM, SQLAlchemy, Linux, Docker, and GitHub Actions.
+                  Leading development of a reporting application with TypeScript, React, Node.js, and Electron,
+                  owning UI/UX design and system architecture, and building offline document workflows.
                 </p>
               </div>
             </div>
@@ -560,6 +444,32 @@ function App() {
         </section>
 
 {/*---------------------------------------------------------------------------------------------------------------------------------------*/}
+
+        <section id="skills" className="border-t border-white/10 py-20">
+          <h2 className="font-mono text-[13px] uppercase tracking-[0.18em] text-rose-400/70">Skills</h2>
+          <dl className="mt-10 space-y-6">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <dt className="font-mono text-sm text-zinc-400">Languages</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">C/C++, Python, Java, JavaScript/TypeScript, SQL, HTML/CSS, VBA</dd>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <dt className="font-mono text-sm text-zinc-400">Web Development</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">React.js, Next.js</dd>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <dt className="font-mono text-sm text-zinc-400">Backend/Data</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">REST APIs, authentication, CRUD, data validation, PostgreSQL, SQLite, Drizzle ORM, SQLAlchemy</dd>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <dt className="font-mono text-sm text-zinc-400">Tools</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">Git, Linux, Bash, Docker, Node.js, Excel, GitHub Actions</dd>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <dt className="font-mono text-sm text-zinc-400">Machine Learning/Computer Vision</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">CVAT, dataset QA</dd>
+            </div>
+          </dl>
+        </section>
 
         {/* contact / footer section */} 
         <section
@@ -572,9 +482,6 @@ function App() {
               contact
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">
-              
-            </h2>
 
             <p className="mt-5 max-w-md text-lg leading-8 text-zinc-300">
               Reach out to me through these links:
@@ -616,14 +523,7 @@ function App() {
                   <span className="text-xl">Email</span>
                 </div>
 
-                <div className="grid gap-3 md:grid-cols-2">
-                  <a
-                    href="mailto:iankeilman@proton.me"
-                    className="rounded-xl border border-white/10 px-4 py-3 text-sm text-zinc-300 transition hover:border-rose-400/40 hover:text-rose-400"
-                  >
-                    iankeilman@proton.me
-                  </a>
-
+                <div className="grid gap-3">
                   <a
                     href="mailto:iantkeilman@gmail.com"
                     className="rounded-xl border border-white/10 px-4 py-3 text-sm text-zinc-300 transition hover:border-rose-400/40 hover:text-rose-400"
@@ -633,9 +533,16 @@ function App() {
                 </div>
               </div>
               
-              {/*}
               <a
-                href="#"
+                href="tel:+19253789666"
+                className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 text-zinc-200 transition hover:border-rose-400/40 hover:bg-white/[0.04] hover:text-rose-400"
+              >
+                <span className="text-xl">(925) 378-9666</span>
+                <span className="font-mono text-sm text-zinc-500">↗</span>
+              </a>
+
+              <a
+                href="/Ian_Keilman_resume.pdf"
                 className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 text-zinc-200 transition hover:border-rose-400/40 hover:bg-white/[0.04] hover:text-rose-400"
               >
                 <div className="flex items-center gap-4">
@@ -643,8 +550,7 @@ function App() {
                   <span className="text-xl">Resume</span>
                 </div>
                 <span className="font-mono text-sm text-zinc-500">↗</span>
-              </a> 
-              */}
+              </a>
             </div>
           </div>
         </section>
