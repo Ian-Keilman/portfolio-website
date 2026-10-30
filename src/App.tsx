@@ -98,7 +98,7 @@ function App() {
               </div>
 
               <p className="mt-5 font-mono text-sm text-zinc-400">
-                SF Bay Area, CA · U.S. Citizen
+                San Francisco Bay Area, CA · U.S. Citizen
               </p>
               <a
                 href="/Ian_Keilman_resume.pdf"
@@ -365,6 +365,38 @@ function App() {
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">GoogleTest</span>
               </div>
             </article>
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+              <h3 className="text-3xl font-semibold tracking-tight text-white">FaultSift</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Linux log triage command-line tool</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• Scans log files, flags failures, and summarizes severity</li>
+                <li>• Separates matching, scanning, scoring, and reporting into modules, with pytest validation</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Regex</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Git</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">CLI</span>
+              </div>
+            </article>
+            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+              <h3 className="text-3xl font-semibold tracking-tight text-white">TraceShelf</h3>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">Authenticated record-management backend</p>
+              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                <li>• FastAPI backend for authenticated, per-user record, issue, and activity CRUD</li>
+                <li>• PostgreSQL and Alembic migrations, API tests, GitHub Actions CI, and pull request review</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">FastAPI</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">PostgreSQL</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">SQLAlchemy</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Alembic</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
+                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Docker</span>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -379,9 +411,6 @@ function App() {
               about
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">
-
-            </h2>
           </div>
 
           {/* right column */}
@@ -453,9 +482,6 @@ function App() {
               contact
             </p>
 
-            <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white">
-              
-            </h2>
 
             <p className="mt-5 max-w-md text-lg leading-8 text-zinc-300">
               Reach out to me through these links:
