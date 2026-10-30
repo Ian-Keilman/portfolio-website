@@ -320,7 +320,7 @@ function App() {
                 Bachelor’s Degree, Computer Science and Engineering
               </h3>
               <p className="mt-4 text-base leading-7 text-zinc-400">
-                Focus in networking & digital technology
+                {/* Focus */}
               </p>
             </article>
           </div>
