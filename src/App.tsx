@@ -28,10 +28,7 @@ const recentProjects = [
     description: 'Shipped and published multiple Roblox games and developed mobile games for iOS and Android.',
     highlights: [],
     technologies: ['Roblox', 'iOS', 'Android'],
-    links: [
-      { label: 'Play ChickenRoad on Roblox', href: 'https://www.roblox.com/games/96654868116042/ChickenRoad' },
-      { label: 'Play Dragon Run on Roblox', href: 'https://www.roblox.com/games/93304757410596/Dragon-Run' },
-    ],
+    links: [],
   },
 ]
 
@@ -126,7 +123,8 @@ function App() {
                 </h1>
 
                 <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-                  I design interfaces and build the systems behind them, from offline reporting tools and B2B platforms to web and mobile apps.
+                  Software Engineer with full-time contract experience and 3 internships building backend/database systems, internal
+                  tools, and data-heavy applications. Strong with Python, TypeScript, C/C++, SQL, PostgreSQL, React/Next.js, and Linux.
                 </p>
               </div>
 
@@ -399,28 +397,17 @@ function App() {
                     <span key={technology} className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">{technology}</span>
                   ))}
                 </div>
-                <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
-                  {links.map(({ label, href }) => (
-                    <a key={href} href={href} className="text-sm text-zinc-400 transition hover:text-rose-400">
-                      {label} <span aria-hidden="true">↗</span>
-                    </a>
-                  ))}
-                </div>
+                {links.length > 0 && (
+                  <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+                    {links.map(({ label, href }) => (
+                      <a key={href} href={href} className="text-sm text-zinc-400 transition hover:text-rose-400">
+                        {label} <span aria-hidden="true">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
               </article>
             ))}
-            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <h3 className="text-3xl font-semibold tracking-tight text-white">HedgeSlice</h3>
-              <p className="mt-5 text-lg leading-8 text-zinc-300">Price-time priority limit order book · In development</p>
-              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Implementing a price-time priority limit order book with limit/market orders, cancellations, and trade execution logs</li>
-                <li>• Building matching logic with ordered maps, queues, and hash tables; validating edge cases with unit tests</li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">C++</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">STL</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">GoogleTest</span>
-              </div>
-            </article>
           </div>
         </section>
 
