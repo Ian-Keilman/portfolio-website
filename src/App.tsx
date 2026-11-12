@@ -2,7 +2,7 @@
 
 const recentProjects = [
   {
-    name: 'CueSprout',
+    name: 'QSprout',
     description: 'Offline-first web and native iOS app',
     highlights: [
       'Designed responsive, accessible UI/UX for an offline-first React web app and a native SwiftUI iOS app.',
@@ -10,6 +10,7 @@ const recentProjects = [
       'Containerized and deployed the application to Render and used Tailscale to access a self-built bug report and fix tool.',
     ],
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Swift', 'Neon', 'Render', 'Tailscale'],
+    links: [{ label: 'Open QSprout', href: 'https://qsprout.iankeilman.com/' }],
   },
   {
     name: 'Submurmur',
@@ -20,12 +21,17 @@ const recentProjects = [
       'Built a Stripe webhook service that issues ECDSA-signed licenses clients verify offline.',
     ],
     technologies: ['Swift', 'Kotlin', 'TypeScript', 'AVFoundation', 'Cloudflare Workers'],
+    links: [{ label: 'Open Submurmur (sign-in required)', href: 'https://submurmur.iankeilman.com/' }],
   },
   {
     name: 'Game Development',
     description: 'Shipped and published multiple Roblox games and developed mobile games for iOS and Android.',
     highlights: [],
     technologies: ['Roblox', 'iOS', 'Android'],
+    links: [
+      { label: 'Play ChickenRoad on Roblox', href: 'https://www.roblox.com/games/96654868116042/ChickenRoad' },
+      { label: 'Play Dragon Run on Roblox', href: 'https://www.roblox.com/games/93304757410596/Dragon-Run' },
+    ],
   },
 ]
 
@@ -375,11 +381,11 @@ function App() {
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">SQLite</span>
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Drizzle ORM</span>
               </div>
-              <a href="https://github.com/Ian-Keilman/sorter.ly" className="mt-6 inline-block text-sm text-zinc-400 transition hover:text-rose-400">
-                GitHub ↗
+              <a href="https://sorterly.iankeilman.com/" className="mt-6 inline-block text-sm text-zinc-400 transition hover:text-rose-400">
+                Open sorter.ly ↗
               </a>
             </article>
-            {recentProjects.map(({ name, description, highlights, technologies }) => (
+            {recentProjects.map(({ name, description, highlights, technologies, links }) => (
               <article key={name} className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
                 <h3 className="text-3xl font-semibold tracking-tight text-white">{name}</h3>
                 <p className="mt-5 text-lg leading-8 text-zinc-300">{description}</p>
@@ -391,6 +397,13 @@ function App() {
                 <div className="mt-6 flex flex-wrap gap-2">
                   {technologies.map(technology => (
                     <span key={technology} className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">{technology}</span>
+                  ))}
+                </div>
+                <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+                  {links.map(({ label, href }) => (
+                    <a key={href} href={href} className="text-sm text-zinc-400 transition hover:text-rose-400">
+                      {label} <span aria-hidden="true">↗</span>
+                    </a>
                   ))}
                 </div>
               </article>
@@ -406,38 +419,6 @@ function App() {
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">C++</span>
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">STL</span>
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">GoogleTest</span>
-              </div>
-            </article>
-            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <h3 className="text-3xl font-semibold tracking-tight text-white">FaultSift</h3>
-              <p className="mt-5 text-lg leading-8 text-zinc-300">Linux log triage command-line tool</p>
-              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Scans log files, flags failures, and summarizes severity</li>
-                <li>• Separates matching, scanning, scoring, and reporting into modules, with pytest validation</li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Regex</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Git</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">CLI</span>
-              </div>
-            </article>
-            <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
-              <h3 className="text-3xl font-semibold tracking-tight text-white">TraceShelf</h3>
-              <p className="mt-5 text-lg leading-8 text-zinc-300">Authenticated record-management backend</p>
-              <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• FastAPI backend for authenticated, per-user record, issue, and activity CRUD</li>
-                <li>• PostgreSQL and Alembic migrations, API tests, GitHub Actions CI, and pull request review</li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Python</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">FastAPI</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">PostgreSQL</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">SQLAlchemy</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Alembic</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Pytest</span>
-                <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Docker</span>
               </div>
             </article>
           </div>
