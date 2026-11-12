@@ -1,42 +1,70 @@
 // main portfolio page
 
+const recentProjects = [
+  {
+    name: 'CueSprout',
+    description: 'Offline-first web and native iOS app',
+    highlights: [
+      'Designed responsive, accessible UI/UX for an offline-first React web app and a native SwiftUI iOS app.',
+      'Built Node.js APIs with Neon PostgreSQL, Auth0 sign-in, offline sync, and Stripe subscription billing.',
+      'Containerized and deployed the application to Render and used Tailscale to access a self-built bug report and fix tool.',
+    ],
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Swift', 'Neon', 'Render', 'Tailscale'],
+  },
+  {
+    name: 'Submurmur',
+    description: 'Customizable offline audio app',
+    highlights: [
+      'Shipped a customizable offline audio app for iOS, iPadOS, Android, macOS, Windows, Linux, watchOS, and web.',
+      'Built audio mixers with AVFoundation and Web Audio for speech playback and live gain control.',
+      'Built a Stripe webhook service that issues ECDSA-signed licenses clients verify offline.',
+    ],
+    technologies: ['Swift', 'Kotlin', 'TypeScript', 'AVFoundation', 'Cloudflare Workers'],
+  },
+  {
+    name: 'Game Development',
+    description: 'Shipped and published multiple Roblox games and developed mobile games for iOS and Android.',
+    highlights: [],
+    technologies: ['Roblox', 'iOS', 'Android'],
+  },
+]
+
+function GitHubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+      <path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56v-2.03c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.12-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.19a10.9 10.9 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.63.23 2.83.11 3.13.74.82 1.19 1.86 1.19 3.12 0 4.43-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14v3.17c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.34.5 12 .5Z" />
+    </svg>
+  )
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+      <path d="M4.98 3.5A2.48 2.48 0 1 0 5 8.46 2.48 2.48 0 0 0 4.98 3.5ZM2.75 9.75h4.46v11.75H2.75ZM9.75 9.75h4.27v1.6h.06c.6-1.13 2.05-2.32 4.22-2.32 4.5 0 5.33 2.96 5.33 6.8v5.67h-4.45v-5.03c0-1.2-.02-2.75-1.67-2.75-1.68 0-1.94 1.31-1.94 2.66v5.12H9.75Z" />
+    </svg>
+  )
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <path d="M3 6.75h18v10.5H3z" />
+      <path d="m4 8 8 6 8-6" />
+    </svg>
+  )
+}
+
+function FileIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+      <path d="M7 3.75h7l4 4v12.5H7z" />
+      <path d="M14 3.75v4h4" />
+    </svg>
+  )
+}
+
+
 function App() {
-
-  {/* Link icons for the 'contact' section */}
-  function GitHubIcon() {
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-        <path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56v-2.03c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.12-.12-.3-.52-1.5.11-3.13 0 0 .97-.31 3.18 1.19a10.9 10.9 0 0 1 5.79 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.63.23 2.83.11 3.13.74.82 1.19 1.86 1.19 3.12 0 4.43-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14v3.17c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12C23.5 5.66 18.34.5 12 .5Z" />
-      </svg>
-    )
-  }
-
-  function LinkedInIcon() {
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-        <path d="M4.98 3.5A2.48 2.48 0 1 0 5 8.46 2.48 2.48 0 0 0 4.98 3.5ZM2.75 9.75h4.46v11.75H2.75ZM9.75 9.75h4.27v1.6h.06c.6-1.13 2.05-2.32 4.22-2.32 4.5 0 5.33 2.96 5.33 6.8v5.67h-4.45v-5.03c0-1.2-.02-2.75-1.67-2.75-1.68 0-1.94 1.31-1.94 2.66v5.12H9.75Z" />
-      </svg>
-    )
-  }
-
-  function MailIcon() {
-    return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-        <path d="M3 6.75h18v10.5H3z" />
-        <path d="m4 8 8 6 8-6" />
-      </svg>
-    )
-  }
-
-  function FileIcon() {
-    return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
-        <path d="M7 3.75h7l4 4v12.5H7z" />
-        <path d="M14 3.75v4h4" />
-      </svg>
-    )
-  }
-
   {/* note: consider adding a rickroll button for fun? */}
 
 {/*---------------------------------------------------------------------------------------------------------------------------------------*/}
@@ -92,8 +120,7 @@ function App() {
                 </h1>
 
                 <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-                  Software Engineer with full-time contract experience and 3 internships building backend/database systems, internal
-                  tools, and data-heavy applications. Strong with Python, TypeScript, C/C++, SQL, PostgreSQL, React/Next.js, and Linux.
+                  I design interfaces and build the systems behind them, from offline reporting tools and B2B platforms to web and mobile apps.
                 </p>
               </div>
 
@@ -172,13 +199,14 @@ function App() {
                 American Soil Testing & Engineering Inc. • Alamo, CA (Remote) | August 2026 - Present
               </p>
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-                Software Engineer | Contract, Project Lead
+                Software Engineer, Contract - Project Lead
               </h3>
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Led a small development team to deliver a custom reporting application, solely owning UI/UX design and system architecture while translating evolving client requirements using TypeScript, React, Node.js, and Electron.</li>
-                <li>• Built reusable report templates, autofill workflows, and a PDF/DOCX ingestion pipeline using PDF.js and Tesseract OCR to support editing legacy documents containing text, images, tables, and metadata.</li>
-                <li>• Engineered schema-validated offline persistence with atomic file writes, IndexedDB, and filesystem synchronization, enabling offline editing and file sharing through a Google Drive–synced folder without a custom cloud backend.</li>
-                <li>• Developed collision-aware document layout, cross-page reflow, and PDF export; expanded the regression suite to 355 automated tests across 26 test files.</li>
+                <li>• Led a small team and communicated directly with clients to ship an app that automates geotechnical report assembly.</li>
+                <li>• Designed the entire UI/UX from scratch, combining Notion-style organization with Adobe Acrobat-style annotation.</li>
+                <li>• Made legacy reports editable with a TypeScript PDF/DOCX import pipeline using PDF.js and Tesseract OCR.</li>
+                <li>• Built recoverable Node.js storage with schema validation, atomic writes, and two-way filesystem sync.</li>
+                <li>• Restricted native access with Electron sandboxing and scoped IPC, and validated the beta with 425 tests.</li>
               </ul>
             </article>
 
@@ -193,9 +221,10 @@ function App() {
               </h3>
 
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Built backend/database features for Polaris, a full-stack internal operations platform replacing B2B SaaS workflows</li>
-                <li>• Created order management features with PostgreSQL schemas, Drizzle, CRUD, server actions, and SKU-linked records</li>
-                <li>• Added RLS/CASL authorization, real-time UI updates, integration tests, and end-to-end validation</li>
+                <li>• Built an end-to-end order and fulfillment platform that streamlined B2B operations from SKU entry through delivery.</li>
+                <li>• Designed PostgreSQL/Drizzle schemas, server actions, audit histories, and synchronized order-to-fulfillment records.</li>
+                <li>• Implemented role-based access control and real-time multi-user updates with Supabase and TanStack Query.</li>
+                <li>• Delivered keyboard-driven workflows backed by 182 unit, integration, and Chromium/Firefox end-to-end tests.</li>
               </ul>
             </article>
 
@@ -249,7 +278,7 @@ function App() {
             {/* Internship 1 */}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
               <p className="font-mono text-[13px] text-zinc-500">
-                Grand Petroleum Inc. • Pleasant Hill, CA (Remote) | September 2024 - August 2025
+                Grand Petroleum Inc. • Pleasant Hill, CA (Hybrid) | September 2024 - August 2025
               </p>
 
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
@@ -319,9 +348,6 @@ function App() {
               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
                 Bachelor’s Degree, Computer Science and Engineering
               </h3>
-              <p className="mt-4 text-base leading-7 text-zinc-400">
-                {/* Focus */}
-              </p>
             </article>
           </div>
         </section>
@@ -338,8 +364,9 @@ function App() {
               <h3 className="text-3xl font-semibold tracking-tight text-white">sorter.ly</h3>
               <p className="mt-5 text-lg leading-8 text-zinc-300">Local-first customizable collection manager</p>
               <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
-                <li>• Local-first customizable collection manager with dynamic fields, typed records, and private SQLite-backed storage</li>
-                <li>• Implemented record CRUD, typed sorting and filtering, and CSV import/export in a full-stack web application</li>
+                <li>• Benchmarked SQL pagination on 100,000 test records, fetching the first page in 5.9 ms.</li>
+                <li>• Built a responsive React catalog with faceted filters, live counts, and inline record previews.</li>
+                <li>• Implemented two-way CSV sync with typed validation, transactional imports, and conflict detection.</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">Next.js</span>
@@ -352,6 +379,22 @@ function App() {
                 GitHub ↗
               </a>
             </article>
+            {recentProjects.map(({ name, description, highlights, technologies }) => (
+              <article key={name} className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
+                <h3 className="text-3xl font-semibold tracking-tight text-white">{name}</h3>
+                <p className="mt-5 text-lg leading-8 text-zinc-300">{description}</p>
+                {highlights.length > 0 && (
+                  <ul className="mt-6 space-y-3 text-base leading-7 text-zinc-400">
+                    {highlights.map(highlight => <li key={highlight}>• {highlight}</li>)}
+                  </ul>
+                )}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {technologies.map(technology => (
+                    <span key={technology} className="rounded-xl border border-white/10 px-3 py-1 font-mono text-xs text-zinc-400">{technology}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
             <article className="rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.03]">
               <h3 className="text-3xl font-semibold tracking-tight text-white">HedgeSlice</h3>
               <p className="mt-5 text-lg leading-8 text-zinc-300">Price-time priority limit order book · In development</p>
@@ -450,23 +493,19 @@ function App() {
           <dl className="mt-10 space-y-6">
             <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
               <dt className="font-mono text-sm text-zinc-400">Languages</dt>
-              <dd className="mt-3 text-base leading-7 text-zinc-300">C/C++, Python, Java, JavaScript/TypeScript, SQL, HTML/CSS, VBA</dd>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">C/C++, Python, Java, JavaScript/TypeScript, SQL, Swift, Kotlin, Luau</dd>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <dt className="font-mono text-sm text-zinc-400">Web Development</dt>
-              <dd className="mt-3 text-base leading-7 text-zinc-300">React.js, Next.js</dd>
+              <dt className="font-mono text-sm text-zinc-400">Tools &amp; Infrastructure</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">Git, Linux, Bash, Docker, GitHub Actions, Cloudflare Workers, Render</dd>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <dt className="font-mono text-sm text-zinc-400">Backend/Data</dt>
-              <dd className="mt-3 text-base leading-7 text-zinc-300">REST APIs, authentication, CRUD, data validation, PostgreSQL, SQLite, Drizzle ORM, SQLAlchemy</dd>
+              <dt className="font-mono text-sm text-zinc-400">Frameworks &amp; Platforms</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">React, Next.js, Node.js, Electron, SwiftUI, Roblox Studio</dd>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <dt className="font-mono text-sm text-zinc-400">Tools</dt>
-              <dd className="mt-3 text-base leading-7 text-zinc-300">Git, Linux, Bash, Docker, Node.js, Excel, GitHub Actions</dd>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <dt className="font-mono text-sm text-zinc-400">Machine Learning/Computer Vision</dt>
-              <dd className="mt-3 text-base leading-7 text-zinc-300">CVAT, dataset QA</dd>
+              <dt className="font-mono text-sm text-zinc-400">Backend &amp; Data</dt>
+              <dd className="mt-3 text-base leading-7 text-zinc-300">PostgreSQL, SQLite, Drizzle ORM, SQLAlchemy, Supabase, REST APIs, Auth0, Stripe</dd>
             </div>
           </dl>
         </section>
